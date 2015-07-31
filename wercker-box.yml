@@ -1,0 +1,11 @@
+name: emacs-box
+version: 0.0.3
+description: latex box
+inherits: wercker/ubuntu12.04-webessentials@0.0.3
+type: main
+platform: ubuntu@12.04
+
+script: |
+  sudo apt-add-repository -y ppa:texlive-backports/ppa
+  sudo apt-get -y update
+  sudo apt-get -y install texlive-lang-cjk xdvik-ja emacs24-nox
